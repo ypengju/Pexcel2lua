@@ -1,5 +1,8 @@
-Pexcel2lua.py  #脚本文件
+Pexcel2lua.py  
 
-dist/           #用pyinstaller生成的exe文件
+sudo pip install xlrd
+sudo pip install pyinstaller 
 
-pyinstaller -D -w Pexcel2lua.py  #命令
+windows: pyinstaller -D -w Pexcel2lua.py  
+
+mac: pyinstaller Pexcel2lua.py  #dist/ 鐩綍涓嬩細鐢熸垚涓�涓悓鍚嶆枃浠讹紝鐐瑰嚮杩愯
