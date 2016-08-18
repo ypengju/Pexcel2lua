@@ -107,7 +107,10 @@ class App(Frame):
             # 读取表数据并写到lua文件
             for row_index in range(1, nrows):
                 lua_f.write("\n\t\t")
-                lua_f.write("[%d] = {" % (sheet.cell(row_index, 0).value))
+#                print (sheet.cell(row_index, 0).value)
+                indexvalue = int(sheet.cell(row_index, 0).value)
+#                print indexvalue
+                lua_f.write("[%d] = {" % indexvalue)
                 for col_index in range(0, ncols):
                     cell_value = sheet.cell(row_index, col_index).value
                     cell_value = self.convert_num(cell_value)
@@ -207,7 +210,7 @@ class App(Frame):
 # create the application
 root = Tk()
 myapp = App(master=root)
-width = 400
+width = 600
 height = 400
 #
 # here are method calls to the window manager class
